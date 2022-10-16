@@ -36,3 +36,21 @@ function init(){
         console.log(data);
     })
 }
+
+function maker(json){
+    const div = document.createElement('div');
+    div.style.display = 'grid';
+    div.style.gridTemplateColumns = '100px 100px 100px 100px';
+    output.append(div);
+    json.forEach((el)=>{
+        //console.log(ele);
+        const keys = Object.keys(el);
+        keys.forEach((key)=>{
+            const ele = document.createElement('div');
+            ele.textContent = el[key];
+            div.append(ele);
+        })
+
+        console.log(keys);
+    })
+}
