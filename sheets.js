@@ -4,8 +4,9 @@ const sheetName = 'users';
 const query = encodeURIComponent('Select *');
 const url = `${base}&sheet=${sheetName}&tq=${query}`;
 const data = [];
-
 document.addEventListener('DOMContentLoaded',init);
+
+const output = document.querySelector('.output');
 
 function init(){
     console.log('ready');
@@ -24,10 +25,10 @@ function init(){
             }
         })
         jsData.table.rows.forEach((main)=>{ //Loop for each row
-            console.log(main);
+            //console.log(main);
             const row = {};
             colz.forEach((ele,ind)=>{
-                console.log(ele);
+                //console.log(ele);
                 row[ele] = (main.c[ind] != null) ? main.c[ind].v : '';
             })
             data.push(row);
