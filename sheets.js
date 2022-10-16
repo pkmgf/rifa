@@ -12,8 +12,15 @@ function init(){
     fetch(url)
     .then(res => res.text())
     .then(rep => {
-        console.log(rep);
-        const js0 = JSON.parse(rep.substring(47).slice(0,-2));
-        console.log(js0);
+        //console.log(rep);
+        const jsData = JSON.parse(rep.substring(47).slice(0,-2));
+        console.log(jsData);
+        const colz = [];
+        jsData.table.cols.forEach((heading)=>{
+            if(heading.label) {
+                const propName = heading.label.toLowerCase().replace(/\s/g,'');
+                console.log(propName);
+            }
+        })
     })
 }
