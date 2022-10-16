@@ -13,5 +13,7 @@ function init(){
     .then(res => res.text())
     .then(rep => {
         console.log(rep);
+        const js0 = JSON.parse(rep.substring(47).slice(0,-2));
+        console.log(js0);
     })
 }
