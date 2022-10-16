@@ -33,7 +33,7 @@ function init(){
             })
             data.push(row);
         })
-        console.log(data);
+        maker(data);
     })
 }
 
