@@ -28,7 +28,7 @@ function init(){
             const row = {};
             colz.forEach((ele,ind)=>{
                 console.log(ele);
-                row[ele] = main.c[ind];
+                row[ele] = (main.c[ind] != null) ? main.c[ind].v : '';
             })
             data.push(row);
         })
