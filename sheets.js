@@ -47,6 +47,7 @@ function maker(json){
         const keys = Object.keys(el);
         keys.forEach((key)=>{
             const ele = document.createElement('div');
+            //ele.style.border
             ele.textContent = el[key];
             div.append(ele);
         })
